@@ -1,4 +1,4 @@
-# vue-m-picker
+# vue-antd-m-picker
 ### Install
 ```
 npm i

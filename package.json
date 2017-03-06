@@ -1,5 +1,5 @@
 {
-  "name": "vue-m-picker",
+  "name": "vue-antd-m-picker",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -7,7 +7,11 @@
     "dev": "./node_modules/.bin/webpack-dev-server --hot --inline --host 0.0.0.0 --port 5100 --content-base dist/",
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --hide-modules"
   },
-  "author": "",
+  "author": "285858315@qq.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/285858315/vue-m-picker.git"
+  },
   "license": "ISC",
   "dependencies": {
     "vue": "^2.2.1",

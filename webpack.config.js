@@ -60,6 +60,8 @@ module.exports = {
 
 if(is_prod){
 	//module.exports.devtool = '#source-map'
+	module.exports.output.library = 'vue-antd-m-picker'
+    module.exports.output.libraryTarget = 'umd'
 	module.exports.plugins = [
 		new webpack.DefinePlugin({
             'process.env': {

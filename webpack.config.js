@@ -2,11 +2,13 @@ var path = require("path")
 var webpack = require("webpack")
 var is_prod = process.env.NODE_ENV === "production"
 var babelOptions = {
-	"presets":['es2015','stage-0']
+	presets:['es2015','stage-0'],
+	plugins: ['transform-runtime']
 }
 module.exports = {
 	entry: {
-		test:'./src/PickerTest.js'
+		test:'./src/PickerTest.js',
+		index:"./src/Picker.vue",
 	},
 	output: {
 		filename: '[name].js',
@@ -53,14 +55,6 @@ module.exports = {
         },
 		extensions: ['.ts', '.tsx', '.js']
     },
-	// externals: {
-    //     vue: {
-    //         root: 'Vue',
-    //         commonjs: 'vue',
-    //         commonjs2: 'vue',
-    //         amd: 'vue'
-    //     }
-    // },
 	devtool: '#source-map'
 }
 
@@ -82,6 +76,14 @@ if(is_prod){
 			minimize: true
 		})
 	]
+	module.exports.externals = {
+        vue: {
+            root: 'Vue',
+            commonjs: 'vue',
+            commonjs2: 'vue',
+            amd: 'vue'
+        }
+    }
 }else{
 	module.exports.devServer = {
 		contentBase:path.join(__dirname, "dist"),

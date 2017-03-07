@@ -31,7 +31,6 @@ export default {
       const children = this.list;
       index = Math.min(index, children.length - 1);
       const child: any = children[index];
-      console.log(child)
       if (child) {
         this.emit("updateValue",child.value)
       } else if (console.warn) {

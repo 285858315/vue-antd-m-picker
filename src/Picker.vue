@@ -98,6 +98,10 @@ export default {
 	created:function(){
 
 	},
+	updated:function(){
+		this.zscroller.reflow()
+		this.select(this.value)
+	},
 	mounted:function(){
 		this.itemHeight = this.$refs.indicator.offsetHeight
 		this.$refs.content.style.padding = `${this.itemHeight * 3}px 0`

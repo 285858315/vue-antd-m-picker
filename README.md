@@ -10,4 +10,4 @@ npm run dev
 
 ## Example
 
-http://localhost:8000/examples/
+https://285858315.github.io/vue-antd-m-picker/

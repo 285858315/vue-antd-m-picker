@@ -7,3 +7,7 @@ npm i
 ```
 npm run dev
 ```
+
+## Example
+
+http://localhost:8000/examples/
